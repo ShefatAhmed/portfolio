@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Banner.css';
 import 'aos/dist/aos.css';
-import { saveAs } from 'file-saver';
 import Aos from 'aos';
 const Banner = () => {
     const [displayText, setDisplayText] = useState('');
@@ -40,10 +39,13 @@ const Banner = () => {
   }, []);
 
   const handleResumeDownload = () => {
-    const fileUrl = '../../../../public/resume.pdf';
-    const fileName = 'resume.pdf'; 
-  
-    saveAs(fileUrl, fileName);
+    const resumePdfUrl = 'https://drive.google.com/uc?id=1_h8fcUbbRYxVwJUGaiLHJNiaguSGPFyV';
+    const link = document.createElement('a');
+    link.href = resumePdfUrl;
+    link.download = 'resume.pdf';
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    link.click();
   };
   
     
