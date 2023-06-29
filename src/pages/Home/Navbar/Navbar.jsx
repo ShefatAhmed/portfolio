@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
+import './Navbar.css';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -7,10 +9,18 @@ const Navbar = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  const scrollToTop = () => {
+    scroll.scrollToTop();
+    setIsOpen(false);
+  };
   return (
     <nav className="flex items-center justify-between flex-wrap mx-6 py-3">
       <Link to="/" className="flex items-center flex-shrink-0 mr-6">
-        <h1 className="font-semibold text-2xl tracking-tight"><i className="fa-solid fa-person-hiking text-indigo-600"></i> Shefat<span className="text-indigo-600">A</span>hmed</h1>
+        <h1 className="font-semibold text-2xl tracking-tight">
+          <i className="fa-solid fa-person-hiking text-indigo-600"></i> Shefat
+          <span className="text-indigo-600">A</span>hmed
+        </h1>
       </Link>
       <div className="block md:hidden">
         <button
@@ -26,38 +36,57 @@ const Navbar = () => {
         </button>
       </div>
       <div
-        className={`w-full ${
-          isOpen ? 'block' : 'hidden'
-        } md:flex md:items-center md:w-auto`}
+        className={`w-full ${isOpen ? "block" : "hidden"} md:flex md:items-center md:w-auto`}
       >
         <div className="md:flex md:gap-8">
-          <Link className="block hover:text-indigo-600 mt-4 md:inline-block md:mt-0 text-center"
-          >
-            Home
-          </Link>
-          <Link className="block hover:text-indigo-600 mt-4 md:inline-block md:mt-0 text-center"
+          <ScrollLink
+            className="block link-style mt-4 md:inline-block md:mt-0 text-center"
+            to="skills"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            onClick={toggleMenu}
           >
             Skills
-          </Link>
-          <Link className="block hover:text-indigo-600 mt-4 md:inline-block md:mt-0 text-center"
+          </ScrollLink>
+          <ScrollLink
+            className="block link-style mt-4 md:inline-block md:mt-0 text-center"
+            to="projects"
+            spy={true}
+            smooth={true}
+            offset={-90}
+            duration={500}
+            onClick={toggleMenu}
           >
             Projects
-          </Link>
-          <Link className="block hover:text-indigo-600 mt-4 md:inline-block md:mt-0 text-center"
+          </ScrollLink>
+          <ScrollLink
+            className="block link-style mt-4 md:inline-block md:mt-0 text-center"
+            to="about"
+            spy={true}
+            smooth={true}
+            offset={-90}
+            duration={500}
+            onClick={toggleMenu}
           >
             About
-          </Link>
-          <Link className="block hover:text-indigo-600 mt-4 md:inline-block md:mt-0 text-center"
-          >
-            Contact
-          </Link>
+          </ScrollLink>
         </div>
       </div>
-        <div className="hidden md:flex">
-          <button className="btn glass bg-indigo-600 rounded-full text-white px-10 hover:bg-indigo-800">
-            Let's Talk 
-          </button>
-        </div>
+      <div className="hidden md:flex">
+        <ScrollLink
+          className="btn glass bg-indigo-600 rounded-full text-white px-10 hover:bg-indigo-800"
+          to="contact"
+          spy={true}
+          smooth={true}
+          offset={-90}
+          duration={500}
+          onClick={scrollToTop}
+        >
+          Let's Talk
+        </ScrollLink>
+      </div>
     </nav>
   );
 };
