@@ -5,6 +5,7 @@ import {
 } from "react-router-dom";
 import Main from './Layout/Main';
 import Home from './pages/Home/Home/Home';
+import Skills from './pages/Home/Skills/Skills';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>
+      },
+      {
+        path: "skills",
+        element: <Skills></Skills>
       }
     ]
   },
@@ -23,6 +28,6 @@ const router = createBrowserRouter([
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+      <RouterProvider router={router} />
   </React.StrictMode>
 )

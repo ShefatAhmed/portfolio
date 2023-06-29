@@ -8,7 +8,7 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <nav className="flex items-center justify-between flex-wrap mx-6 my-3">
+    <nav className="flex items-center justify-between flex-wrap mx-6 py-3">
       <Link to="/" className="flex items-center flex-shrink-0 mr-6">
         <h1 className="font-semibold text-2xl tracking-tight"><i className="fa-solid fa-person-hiking text-indigo-600"></i> Shefat<span className="text-indigo-600">A</span>hmed</h1>
       </Link>
@@ -37,11 +37,15 @@ const Navbar = () => {
           </Link>
           <Link className="block hover:text-indigo-600 mt-4 md:inline-block md:mt-0 text-center"
           >
-            About
+            Skills
           </Link>
           <Link className="block hover:text-indigo-600 mt-4 md:inline-block md:mt-0 text-center"
           >
-            Works
+            Projects
+          </Link>
+          <Link className="block hover:text-indigo-600 mt-4 md:inline-block md:mt-0 text-center"
+          >
+            About
           </Link>
           <Link className="block hover:text-indigo-600 mt-4 md:inline-block md:mt-0 text-center"
           >
@@ -50,7 +54,7 @@ const Navbar = () => {
         </div>
       </div>
         <div className="hidden md:flex">
-          <button className="btn glass bg-indigo-600 rounded-full text-white px-10 hover:bg-indigo-800 ">
+          <button className="btn glass bg-indigo-600 rounded-full text-white px-10 hover:bg-indigo-800">
             Let's Talk 
           </button>
         </div>
