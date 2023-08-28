@@ -19,7 +19,7 @@ const Projects = () => {
                             <Link to="https://github.com/ShefatAhmed/summer-camp-client" className='glass hover:bg-indigo-800 px-5 py-1 rounded mx-2'>
                                 <i class="fa-brands fa-github"></i>
                             </Link>
-                            <Link to="https://eclectic-lolly-80d18b.netlify.app/" className='glass hover:bg-indigo-800 px-5 py-1 rounded'>
+                            <Link to="https://infinite-power.netlify.app/" className='glass hover:bg-indigo-800 px-5 py-1 rounded'>
                                 Live Site
                             </Link>
                         </div>
@@ -30,7 +30,7 @@ const Projects = () => {
                             <Link to="https://github.com/ShefatAhmed/toy-marketplace-client" className='glass hover:bg-indigo-800 px-5 py-1 rounded mx-2'>
                                 <i class="fa-brands fa-github"></i>
                             </Link>
-                            <Link to="https://dancing-tartufo-a9e0b6.netlify.app/" className='glass hover:bg-indigo-800 px-5 py-1 rounded'>
+                            <Link to="https://toystars.netlify.app/" className='glass hover:bg-indigo-800 px-5 py-1 rounded'>
                                 Live Site
                             </Link>
                         </div>
