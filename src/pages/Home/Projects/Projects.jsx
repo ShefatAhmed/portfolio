@@ -38,11 +38,11 @@ const Projects = () => {
 
                     <div className="scroll-item  shadow-2xl rounded-lg" data-aos="flip-right">
                         <div className="bot-button">
-                        <p className='font-bold'>BaburchiGhor</p>
-                            <Link to="https://github.com/ShefatAhmed/chef-recipe-client" className='glass hover:bg-indigo-800 px-5 py-1 rounded mx-2'>
+                        <p className='font-bold'>CarNews</p>
+                            <Link to="https://github.com/ShefatAhmed/carNews" className='glass hover:bg-indigo-800 px-5 py-1 rounded mx-2'>
                                 <i class="fa-brands fa-github"></i>
                             </Link>
-                            <Link to="https://celadon-dodol-ef1d87.netlify.app/" className='glass hover:bg-indigo-800 px-5 py-1 rounded'>
+                            <Link to="https://car-news.vercel.app/" className='glass hover:bg-indigo-800 px-5 py-1 rounded'>
                                 Live Site
                             </Link>
                         </div>
